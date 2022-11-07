@@ -39,6 +39,7 @@ public class EscapeMaze {
 
             if (nx>=0 && nx<8 && ny>=0 && ny<8 && maze[ny][nx]==0 && visit[ny][nx]==false) {
                 Now temp = new Now(nx,ny);
+            if (checkRoad(nx,ny)) {
 
                 // 만약 출구라면 멈추기
                 if(nx==7&&ny==7) {
@@ -57,22 +58,14 @@ public class EscapeMaze {
         }
         return move;
     }
-}
 
-class Now {
-    private int x;
-    private int y;
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public Now(int x, int y) {
-        this.x = x;
-        this.y = y;
+    private static boolean checkRoad(int x, int y) {
+        Boolean check = false;
+        if (x>=0 && x<maze.length && y>=0 && y<maze.length) {       // 미로 범위 안인지 체크
+            if (maze[y][x]==0 && visit[y][x]==false) {
+                check = true;  // 갈 수 있지만, 아직 가지 않은 길인지 체크
+            }
+        }
+        return check;
     }
 }
