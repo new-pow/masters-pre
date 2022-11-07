@@ -6,7 +6,7 @@ import java.util.List;
 public class EscapeMaze {
     // 미로
     // 0은 open, 1은 close
-    private static int[][] maze = {
+    private static final int[][] maze = {
             {0, 1, 1, 1, 0, 1, 1, 1}, // 1행
             {0, 0, 0, 1, 0, 0, 0, 0}, // 2행
             {1, 1, 0, 0, 0, 1, 0, 1}, // 3행
@@ -17,7 +17,7 @@ public class EscapeMaze {
             {0, 1, 1, 0, 1, 1, 1, 0}  // 8행
     };
 
-    private  static boolean[][] visit = new boolean[8][8];
+    private  static final boolean[][] visit = new boolean[8][8];
 
     static Boolean exitFlag = false;
 
