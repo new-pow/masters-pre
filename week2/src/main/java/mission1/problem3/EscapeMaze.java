@@ -26,33 +26,28 @@ public class EscapeMaze {
     private static int[] dy = {1, -1, 0, 0};
 
     // 이동 배열
-    static List<Now> move = new ArrayList<>();
+    static List<On> move = new ArrayList<>();
 
-    public static List<Now> bfs(int x, int y) {
-        Now now = new Now(x,y);
-        move.add(now);          // 이동 배열에서 넣기
+    public static List<On> escape(int x, int y) {
+        On now = new On(x,y);
+        move.add(now);          // 이동 배열에서 넣기 push
         visit[y][x] = true;     // 이동 행적 체크
 
         for (int i=0; i<dx.length; i++) {
             int nx = x+dx[i];
             int ny = y+dy[i];
 
-            if (nx>=0 && nx<8 && ny>=0 && ny<8 && maze[ny][nx]==0 && visit[ny][nx]==false) {
-                Now temp = new Now(nx,ny);
             if (checkRoad(nx,ny)) {
 
                 // 만약 출구라면 멈추기
                 if(nx==7&&ny==7) {
-                    // 배열에 넣기
                     exitFlag = true;
                     return move;
                 }
-
-                // 추가로 더 가기
-                bfs(nx,ny);
+                // 아니라면 더 가기
+                escape(nx,ny);
                 if (!exitFlag) {
-//                    System.out.println("되돌아온 길 : ("+nx+", "+ny+")");
-                    move.remove(move.size()-1); // 되돌아가는 좌표 제외
+                    move.remove(move.size()-1); // 되돌아가는 좌표 pop
                 }
             }
         }
