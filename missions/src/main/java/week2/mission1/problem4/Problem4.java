@@ -2,6 +2,7 @@ package week2.mission1.problem4;
 import java.util.Scanner;
 
 import static week2.mission1.problem4.Controller.*;
+import static week2.mission1.problem4.Printer.*;
 
 public class Problem4 {
     static Scanner scanner = new Scanner(System.in);
@@ -9,14 +10,14 @@ public class Problem4 {
     public static void main(String[] args) {
         int turn = 0;
 
-        Printer.startGame();
+        startGame();
 
-        Printer.askPlayerNum();
+        askPlayerNum();
         int n = scanner.nextInt();
         scanner.nextLine();
 
         String[] players = Player.getPlayers(n);
-        Printer.startWord();
+        startWord();
 
         char chain = Controller.getChain("기러기");
         playTurn(players, chain, turn);

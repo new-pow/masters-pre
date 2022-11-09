@@ -14,6 +14,7 @@ public class Controller {
         // 참가자 단어 체크
         if (!isChain(playerWord, chain) || !checkLength(playerWord)) {
             Printer.endGame(player);
+            return;
         } else {
             playTurn(players, getChain(playerWord), turn+1);
         }
