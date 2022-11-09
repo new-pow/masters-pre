@@ -1,7 +1,7 @@
-package week2.algorithm.problem2;
+package week2.algorithm.problem3;
 
 import java.util.*;
-public class Problem3 {
+public class Programmers68644 {
      public int[] solution(int[] numbers) {
         Set<Integer> answerSet = new HashSet<>();
 
@@ -18,7 +18,7 @@ public class Problem3 {
 }
 
 // 훨씬 빠른 코드
-
+// Iterator 공부하기
 class Solution {
     public int[] solution(int[] numbers) {
         int[] answer;
