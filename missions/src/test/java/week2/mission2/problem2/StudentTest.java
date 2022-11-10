@@ -16,7 +16,7 @@ class StudentTest {
                 new Subject("국어", "100"),
                 new Subject("수학", "100")
         );
-        Student kim = school.getStudent("Kim","수학", kimScores);
+        Student kim = school.initStudent("Kim","수학", kimScores);
 
         // Lee
         List<Subject> leeScores = Arrays.asList(
@@ -24,7 +24,7 @@ class StudentTest {
                 new Subject("수학", "55"),
                 new Subject("영어", "100")
         );
-        Student lee = school.getStudent("Lee","국어", leeScores);
+        Student lee = school.initStudent("Lee","국어", leeScores);
 
         System.out.println(kim.getId());
         System.out.println(lee.getId());
