@@ -20,8 +20,6 @@ public class Subject {
         this.score = score;
     }
 
-    public Subject() {}
-
     public Subject(String name, String score) {
         this.name = name;
         this.score = Integer.parseInt(score);

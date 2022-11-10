@@ -6,6 +6,8 @@ public class Student {
     String name;
     int id;
     String major;
+
+    // getter setter
     List<Subject> subjects;
 
     public String getName() {
@@ -30,18 +32,6 @@ public class Student {
 
     public List<Subject> getSubjects() {
         return subjects;
-    }
-
-    public Student() {
-    }     // 기본 생성자
-
-    /**
-     * 새 학생(이름, 아이디, 전공, 과목리스트)
-     */
-    public Student(String name, int id, String major) {
-        this.name = name;
-        this.id = id;
-        this.major = major;
     }
 
     /**

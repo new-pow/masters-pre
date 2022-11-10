@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class School {
-    private static int stdId;
+    private static int stdId; // 학생들에게 부여되는 아이디
     private static List<Student> students;
 
     public School() {
@@ -43,12 +43,5 @@ public class School {
             if (s.getId() == stdId) student = s;
         }
         return student;
-    }
-
-    public static void showStudentsInfoById(int stdId) {
-        Student student = searchStudent(stdId);
-
-        System.out.printf(student.getName()+" 학생은 "+ student.getSubjectCount() +"과목을 수강했습니다.\n");
-        System.out.printf("총점은 "+ student.getTotalScore() +"점이고 평균은 "+ student.getAverageScore() +"점입니다.\n");
     }
 }
