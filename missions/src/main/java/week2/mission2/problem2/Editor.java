@@ -15,19 +15,22 @@ public class Editor {
             runEditor(school);
         }
     }
-    public static void runEditor(School school) throws IOException {
+    private static void runEditor(School school) throws IOException {
         System.out.println();
         school.showAllStudentsId();
 
         System.out.println();
-        EditorPrinter.printSelectStudent();
+
+        EditorPrinter.printSelectStudent();     // 학생 id로 선택
         int studentId = sc.nextInt();
         Student student = school.searchStudent(studentId);
-        Subject subject = selectScore(student);
 
-        editSubject(subject);
-        InputOutput.saveContents(school.getStudents());
-        school.showAllStudentsInfo();
+        Subject subject = selectScore(student); // 과목 선택
+        editSubject(subject);                   // 점수 수정
+
+        InputOutput.saveContents(school.getStudents()); // 수정된 사항 파일에 저장
+
+        school.showAllStudentsInfo();           // 다시 학생 정보 보기
     }
 
     private static void editSubject(Subject subject) {
