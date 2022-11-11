@@ -54,10 +54,10 @@ public class Student {
         return totalScore;
     }
 
-    public int getAverageScore() {
+    public double getAverageScore() {
         int totalScore = 0;
         for (Subject subject : subjects) totalScore += subject.getScore();
-        return totalScore / subjects.size();
+        return Math.round((double) totalScore / subjects.size()*100)/100.0;
     }
 
     public void showStudentsInfo() {
