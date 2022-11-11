@@ -41,10 +41,11 @@ public class Game {
     }
 
     public void printGamerState() {
-        System.out.println("Gamer ----------------------------");
-        System.out.println("Money > "+ gamer.getMoney());
-        System.out.println("Fruits > " + gamer.getFruits().toString());
-        System.out.println("----------------------------------");
+        System.out.printf(
+                "Gamer ----------------------------\n" +
+                "Money > %d \n" + "Fruits > %s \n" +
+                "----------------------------------\n",
+                gamer.getMoney(), gamer.getFruits().toString());
     }
 
     public void printRoll(int turn, int dice) {
