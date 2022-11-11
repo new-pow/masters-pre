@@ -6,7 +6,7 @@ public class Problem3 {
     public static void main(String[] args) {
         Game game = new Game();
         Originator gamer = game.getGamer();
-        Memento memento = new Memento(gamer.getMoney(),gamer.getFruits());
+        Memento memento = Memento.getMemento(gamer.getMoney(),gamer.getFruits());
         int turn = 100;
 
         int fruitNum = 0;
@@ -18,7 +18,7 @@ public class Problem3 {
             fruitNum = getResult(fruitNum, dice); // 결과 처리
 
             if (gamer.getMoney() > memento.getMoney()) { // 메멘토 처리
-                memento = gamer.createMemento();
+                memento = gamer.createMemento(memento);
             } else if (gamer.getMoney()<(memento.getMoney()/2)) {
                 gamer.setMemento(memento);
             }

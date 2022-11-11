@@ -46,7 +46,7 @@ public class Originator {
         this.fruits = m.getFruits();
     }
 
-    public Memento createMemento() {
-        return new Memento(this.money, this.fruits);
+    public Memento createMemento(Memento m) {
+        return m.getMemento(this.money, this.fruits);
     }
 }
