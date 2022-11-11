@@ -19,7 +19,7 @@ public class Problem3 {
 
             if (gamer.getMoney() > memento.getMoney()) { // 메멘토 처리
                 memento = gamer.createMemento();
-            } else if (gamer.getMoney()<memento.getMoney()/2) {
+            } else if (gamer.getMoney()<(memento.getMoney()/2)) {
                 gamer.setMemento(memento);
             }
 
