@@ -1,10 +1,11 @@
-package mission1.problem2.topping;
+package mission1.problem2.addThings;
 
 import mission1.problem2.Coffee;
 
 public class Mocha extends Coffee {
 
     private Coffee coffee;
+    private String DESCRIPTION ="Adding Mocha Syrup ";
 
     public Mocha(Coffee coffee) {
         this.coffee = coffee;
@@ -13,6 +14,6 @@ public class Mocha extends Coffee {
     @Override
     public void brewing() {
         coffee.brewing();
-        System.out.print("Adding Mocha Syrup ");
+        System.out.print(DESCRIPTION);
     }
 }

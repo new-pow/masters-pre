@@ -3,12 +3,9 @@ package mission1.problem2.coffee;
 import mission1.problem2.Coffee;
 
 public class EtiopiaAmericano extends Coffee {
-    public EtiopiaAmericano() {
-        super();
-    }
-
+    private final String DESCRIPTION = "EtiopiaAmericano ";
     @Override
     public void brewing() {
-        System.out.print("EtiopiaAmericano ");
+        System.out.print(DESCRIPTION);
     }
 }
