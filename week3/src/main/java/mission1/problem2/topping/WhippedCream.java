@@ -1,4 +1,17 @@
-package mission1.problem2.coffee;
+package mission1.problem2.topping;
 
-public class WhippedCream {
+import mission1.problem2.Coffee;
+
+public class WhippedCream extends Coffee {
+    private Coffee coffee;
+
+    public WhippedCream(Coffee coffee) {
+        this.coffee = coffee;
+    }
+
+    @Override
+    public void brewing() {
+        coffee.brewing();
+        System.out.print("Adding WhippedCream ");
+    }
 }
