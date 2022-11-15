@@ -3,9 +3,11 @@ package mission1.problem2.coffee;
 import mission1.problem2.Coffee;
 
 public class BrazilAmericano extends Coffee {
-    private final String DESCRIPTION = "BrazilAmericano ";
+    public BrazilAmericano() {
+        super("BrazilAmericano ");
+    }
     @Override
     public void brewing() {
-        System.out.print(DESCRIPTION);
+        System.out.print(description);
     }
 }

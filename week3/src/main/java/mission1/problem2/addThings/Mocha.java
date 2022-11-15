@@ -5,15 +5,15 @@ import mission1.problem2.Coffee;
 public class Mocha extends Coffee {
 
     private Coffee coffee;
-    private String DESCRIPTION ="Adding Mocha Syrup ";
 
     public Mocha(Coffee coffee) {
+        super("Adding Mocha Syrup ");
         this.coffee = coffee;
     }
 
     @Override
     public void brewing() {
         coffee.brewing();
-        System.out.print(DESCRIPTION);
+        System.out.print(description);
     }
 }
