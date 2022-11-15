@@ -1,14 +1,9 @@
 package mission1.problem1.member;
 
 public class Platinum extends Member{
-    private String grade = "PLATINUM";
-    private double discountRate = 0.05;
-    private double pointRate = 0.05;
-    private boolean counselor = false;
-    private int parkingFee = 1000; // per hour
 
     public Platinum(String name) {
-        super(name);
+        super(name,"PLATINUM",0.05,0.05,false,1000);
     }
 
 

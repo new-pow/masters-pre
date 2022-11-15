@@ -1,14 +1,9 @@
 package mission1.problem1.member;
 
 public class Red extends Member{
-    private String grade = "RED";
-    private double discountRate = 0;
-    private double pointRate = 0.01;
-    private boolean counselor = false;
-    private int parkingFee = 3000; // per hour
 
     public Red(String name) {
-        super(name);
+        super(name,"RED",0,0.01,false,3000);
     }
 
     @Override

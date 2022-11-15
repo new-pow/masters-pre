@@ -1,15 +1,9 @@
 package mission1.problem1.member;
 
 public class Diamond extends Member{
-    private String grade = "DIAMOND";
-    private double discountRate = 0.10;
-    private double pointRate = 0.10;
-    private boolean counselor = true;
-    private int parkingFee = 0; // per hour
-
 
     public Diamond(String name) {
-        super(name);
+        super(name,"DIAMOND",0.10,0.10,true,0);
     }
 
     @Override

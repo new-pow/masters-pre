@@ -78,6 +78,15 @@ public class Member {
         this.name = name;
     }
 
+    public Member(String name, String grade, double discountRate, double pointRate, boolean counselor, int parkingFee) {
+        this.name = name;
+        this.grade = grade;
+        this.discountRate = discountRate;
+        this.pointRate = pointRate;
+        this.counselor = counselor;
+        this.parkingFee = parkingFee;
+    }
+
     /** 지불 금액 계산 */
     protected int getRealPayment(int Money){
         return (int) (Money/(1-this.discountRate));
