@@ -4,11 +4,8 @@ import mission1.problem2.Coffee;
 
 public class Mocha extends Coffee {
 
-    private Coffee coffee;
-
-    public Mocha(Coffee coffee) {
-        super("Adding Mocha Syrup ");
-        this.coffee = coffee;
+    Mocha() {
+        this.description= "Adding Mocha Syrup ";
     }
 
     @Override

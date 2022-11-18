@@ -2,10 +2,17 @@ package mission1.problem2;
 
 public class Coffee {
     protected String description;
+    protected Coffee coffee;
 
-    public Coffee(String description) {
-        this.description = description;
+    public Coffee() {
+        coffee.brewing();
     }
 
-    public void brewing(){};
+    public Coffee(Coffee coffee) {
+        this.coffee = coffee;
+    }
+
+    public void brewing(){
+        System.out.print(description);
+    };
 }
