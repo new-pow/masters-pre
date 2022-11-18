@@ -1,4 +1,4 @@
-package mission1.problem1.member;
+package mission1.problem1.domain;
 
 public class Member {
     protected String name;
@@ -74,10 +74,6 @@ public class Member {
         this.parkingFee = parkingFee;
     }
 
-    public Member(String name) {
-        this.name = name;
-    }
-
     public Member(String name, String grade, double discountRate, double pointRate, boolean counselor, int parkingFee) {
         this.name = name;
         this.grade = grade;
@@ -89,16 +85,16 @@ public class Member {
 
     /** 지불 금액 계산 */
     protected int getRealPayment(int Money){
-        return (int) (Money/(1-this.discountRate));
+        return (int) (Money - (Money*this.discountRate));
     }
 
     /** 적립 포인트 계산 */
-    int getSavingPoint(int Money) {
+    public int getSavingPoint(int Money) {
         return (int) (Money*this.pointRate);
     }
 
     /** 주차요금 계산 */
-    int getParkingFee(int hour) {
+    public int getParkingFee(int hour) {
         return hour*this.parkingFee;
     }
 
