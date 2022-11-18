@@ -1,9 +1,9 @@
 package mission1.problem2;
 
 import mission1.problem2.coffee.*;
-import mission1.problem2.addThings.Latte;
-import mission1.problem2.addThings.Mocha;
-import mission1.problem2.addThings.WhippedCream;
+import mission1.problem2.topping.Latte;
+import mission1.problem2.topping.Mocha;
+import mission1.problem2.topping.WhippedCream;
 import org.junit.jupiter.api.Test;
 
 class CoffeeTest {

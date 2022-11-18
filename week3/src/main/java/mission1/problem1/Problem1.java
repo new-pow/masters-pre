@@ -1,9 +1,9 @@
 package mission1.problem1;
 
-import mission1.problem1.member.Diamond;
-import mission1.problem1.member.Member;
-import mission1.problem1.member.Platinum;
-import mission1.problem1.member.Red;
+import mission1.problem1.domain.Diamond;
+import mission1.problem1.domain.Member;
+import mission1.problem1.domain.Platinum;
+import mission1.problem1.domain.Red;
 
 public class Problem1 {
 
