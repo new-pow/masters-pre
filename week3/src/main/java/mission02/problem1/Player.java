@@ -1,61 +1,23 @@
 package mission02.problem1;
 
 
-public class Player {
-
-    public static final int BEGINNER_LEVEL = 1;
-    public static final int ADVANCED_LEVEL = 2;
-    public static final int SUPER_LEVEL = 3;
-    private int level;
+public class Player  {
+    protected static PlayerLevel level;
 
     public Player() {
-        level = BEGINNER_LEVEL;
+        this.level = new Beginner();
     }
 
-    public void jump() {
-        if(level == BEGINNER_LEVEL) {
-            System.out.println("Jump 할 줄 모르지롱.");
-        }
-        else if(level == ADVANCED_LEVEL) {
-            System.out.println("높이 jump 합니다.");
-        }
-        else if(level == SUPER_LEVEL) {
-            System.out.println("아주 높이 jump 합니다.");
-        }
+    public static PlayerLevel getLevel() {
+        return level;
     }
 
-    public void run() {
-        if(level == BEGINNER_LEVEL) {
-            System.out.println("천천히 달립니다.");
-        }
-        else if(level == ADVANCED_LEVEL) {
-            System.out.println("빨리 달립니다.");
-        }
-        else if(level == SUPER_LEVEL) {
-            System.out.println("엄청 빨리 달립니다.");
-        }
-
-    }
-
-    public void turn() {
-        if(level == BEGINNER_LEVEL) {
-            System.out.println("Turn 할 줄 모르지롱.");
-        }
-        else if(level == ADVANCED_LEVEL) {
-            System.out.println("Turn 할 줄 모르지롱.");
-        }
-        else if(level == SUPER_LEVEL) {
-            System.out.println("한 바퀴 돕니다.");
-        }
-    }
     public void play(int time) {
-        run();
-        for(int i =0; i < time; i++) {
-            jump();
-        }
-        turn();
+        level.showLevelMessage();
+        level.go(time);
     }
-    public void upgradeLevel(int level) {
+
+    public void upgradeLevel(PlayerLevel level) {
         this.level = level;
     }
 }
