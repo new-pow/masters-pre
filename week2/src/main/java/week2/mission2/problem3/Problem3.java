@@ -8,7 +8,6 @@ public class Problem3 {
         Originator gamer = game.getGamer();
         Memento memento = Memento.getMemento(gamer.getMoney(),gamer.getFruits());
         int turn = 100;
-
         int fruitNum = 0;
 
         while (turn>0 && gamer.getMoney()>0) {
