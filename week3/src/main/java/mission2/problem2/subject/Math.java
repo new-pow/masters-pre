@@ -1,4 +1,4 @@
-package mission02.problem2.subject;
+package mission2.problem2.subject;
 
 public class Math extends Subject{
 

@@ -1,4 +1,4 @@
-package mission02.problem1;
+package mission2.problem1;
 
 public class Advenced extends PlayerLevel {
 

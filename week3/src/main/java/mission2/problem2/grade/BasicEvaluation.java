@@ -1,4 +1,4 @@
-package mission02.problem2.grade;
+package mission2.problem2.grade;
 
 public class BasicEvaluation implements GradeEvaluation{
     @Override

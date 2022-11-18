@@ -1,14 +1,12 @@
-package mission02.problem2;
+package mission2.problem2;
 
-import mission02.problem2.subject.Korean;
-import mission02.problem2.subject.Math;
-import mission02.problem2.subject.Subject;
+import mission2.problem2.subject.Korean;
+import mission2.problem2.subject.Math;
+import mission2.problem2.subject.Subject;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SchoolTest {
 

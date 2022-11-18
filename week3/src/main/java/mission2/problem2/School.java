@@ -1,16 +1,16 @@
-package mission02.problem2;
+package mission2.problem2;
 
-import mission02.problem2.Major.Major;
-import mission02.problem2.score.Score;
-import mission02.problem2.subject.Dance;
-import mission02.problem2.subject.Korean;
-import mission02.problem2.subject.Math;
-import mission02.problem2.subject.Subject;
+import mission2.problem2.Major.Major;
+import mission2.problem2.score.Score;
+import mission2.problem2.subject.Dance;
+import mission2.problem2.subject.Korean;
+import mission2.problem2.subject.Math;
+import mission2.problem2.subject.Subject;
 
 import java.util.*;
 
-import static mission02.problem2.Student.getStudentById;
-import static mission02.problem2.Major.Major.getMajorById;
+import static mission2.problem2.Student.getStudentById;
+import static mission2.problem2.Major.Major.getMajorById;
 
 public class School {
     private static School school;

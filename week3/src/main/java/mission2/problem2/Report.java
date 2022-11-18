@@ -1,13 +1,12 @@
-package mission02.problem2;
+package mission2.problem2;
 
-import mission02.problem2.Major.Major;
-import mission02.problem2.grade.BasicEvaluation;
-import mission02.problem2.grade.GradeEvaluation;
-import mission02.problem2.grade.MajorEvalution;
-import mission02.problem2.grade.PassFailEvaluation;
-import mission02.problem2.score.Score;
-import mission02.problem2.score.ScoreService;
-import mission02.problem2.subject.Subject;
+import mission2.problem2.grade.BasicEvaluation;
+import mission2.problem2.grade.GradeEvaluation;
+import mission2.problem2.grade.MajorEvalution;
+import mission2.problem2.grade.PassFailEvaluation;
+import mission2.problem2.score.Score;
+import mission2.problem2.score.ScoreService;
+import mission2.problem2.subject.Subject;
 
 import java.util.List;
 

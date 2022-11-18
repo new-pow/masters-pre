@@ -1,4 +1,4 @@
-package mission02.problem1;
+package mission2.problem1;
 
 abstract public class PlayerLevel {
 

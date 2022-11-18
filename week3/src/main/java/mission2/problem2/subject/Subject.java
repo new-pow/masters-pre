@@ -1,7 +1,6 @@
-package mission02.problem2.subject;
+package mission2.problem2.subject;
 
-import mission02.problem2.Student;
-import mission02.problem2.grade.GradeEvaluation;
+import mission2.problem2.Student;
 
 import java.util.ArrayList;
 import java.util.List;

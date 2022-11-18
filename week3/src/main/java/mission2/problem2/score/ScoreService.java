@@ -1,6 +1,6 @@
-package mission02.problem2.score;
+package mission2.problem2.score;
 
-import mission02.problem2.subject.Subject;
+import mission2.problem2.subject.Subject;
 
 import java.util.ArrayList;
 import java.util.List;

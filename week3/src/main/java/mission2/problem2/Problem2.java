@@ -1,13 +1,11 @@
-package mission02.problem2;
+package mission2.problem2;
 
-import mission02.problem2.subject.Subject;
-
-import static mission02.problem2.School.getSchool;
+import mission2.problem2.subject.Subject;
 
 public class Problem2 {
     static School mySchool;
     public static void main(String[] args) {
-        mySchool = getSchool();
+        mySchool = School.getSchool();
         mySchool.init();
         mySchool.upgradeProblem();
 
