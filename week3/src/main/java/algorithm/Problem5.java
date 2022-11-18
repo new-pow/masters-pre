@@ -26,13 +26,11 @@ public class Problem5 {
         if (s.contains("PM")) {
             int hh = Integer.parseInt(split[0]);
             split[0] = String.valueOf(hh==12 ? 12 : hh+12);
-            split[2] = split[2].replace("PM","");
         }
         if(s.contains("AM")) {
             split[0] = split[0].equals("12") ? "00" : split[0];
-            split[2] = split[2].replace("AM","");
         }
-        String answer = String.join(":",split);
+        String answer = String.join(":",split).substring(0,s.length()-2);
         return answer;
     }
 
