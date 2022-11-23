@@ -1,7 +1,7 @@
-package mission1;
+package mission1.problem1;
 
-import mission1.domain.GRADE;
-import mission1.domain.Member;
+import mission1.problem1.domain.GRADE;
+import mission1.problem1.domain.Member;
 
 import java.util.ArrayList;
 import java.util.List;

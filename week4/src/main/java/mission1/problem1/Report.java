@@ -1,4 +1,4 @@
-package mission1;
+package mission1.problem1;
 
 public class Report {
 

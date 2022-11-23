@@ -1,4 +1,4 @@
-package mission1.domain;
+package mission1.problem1.domain;
 
 public enum GRADE {
     SILVER(0.01, false, 3000),

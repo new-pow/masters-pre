@@ -1,6 +1,5 @@
-package mission1;
-
-import mission1.domain.*;
+package mission1.problem1;
+import mission1.problem1.domain.GRADE;
 
 public class Problem1 {
 
