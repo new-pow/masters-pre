@@ -17,6 +17,9 @@ public class Report {
     private final String TOP_LINE= " 이름 | 학번 | 중점과목 | 점수 \n";
     private final String TITLE = " 수강생 학점\n";
     private final String SPLIT = "\t| ";
+    private static GradeEvaluation[] gradeEvaluation = {
+            new BasicEvaluation(), new MajorEvalution(), new PassFailEvaluation()
+    };
 
     public Report(List<Score> scoreList) {
         this.scores = scoreList;
@@ -40,14 +43,17 @@ public class Report {
         Student student = score.getStudent();
         Subject majorSubject = student.getMajor().getMainSubject();
 
-        GradeEvaluation[] gradeEvaluation = {new BasicEvaluation(), new MajorEvalution(), new PassFailEvaluation()};
-
         int i = subject.getGradeEvaluation();
+
+        // Basic을 따르고 전공과목일 때
         if (subject.getGradeEvaluation()==0 && majorSubject == subject) i=1;
 
+        // 학생정보
         sb.append(student.getName()+SPLIT);
         sb.append(student.getId()+SPLIT);
         sb.append(majorSubject.getName()+SPLIT);
+
+        // 점수
         sb.append(score.getPoint()+":"+ gradeEvaluation[i].getGrade(score.getPoint())+SPLIT);
         sb.append("\n");
     }

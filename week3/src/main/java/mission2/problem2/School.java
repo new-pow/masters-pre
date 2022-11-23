@@ -8,9 +8,7 @@ import mission2.problem2.subject.Math;
 import mission2.problem2.subject.Subject;
 
 import java.util.*;
-
 import static mission2.problem2.Student.getStudentById;
-import static mission2.problem2.Major.Major.getMajorById;
 
 public class School {
     private static School school;
@@ -18,9 +16,12 @@ public class School {
     private static List<Major> majorList;
     private static List<Student> studentList;
     private static List<Score> scoreList;
+
     Subject korean = new Korean();
     Subject math = new Math();
     Subject dance = new Dance();
+    Major mKorean = new Major("국어국문학과", korean);
+    Major mComputer = new Major("컴퓨터공학과", math);
 
     public static School getSchool() {
         if (school==null) school = new School();
@@ -45,16 +46,13 @@ public class School {
 
     public void init() {
         this.subjectList = Arrays.asList(korean,math,dance);
-        this.majorList = Arrays.asList(
-                new Major("국어국문학과", korean),
-                new Major("컴퓨터공학과", math)
-        );
+        this.majorList = Arrays.asList(mKorean,mComputer);
         this.studentList = Arrays.asList(
-                new Student("김감찬", "211213", getMajorById(majorList, 100)),
-                new Student("김유신", "212330", getMajorById(majorList, 101)),
-                new Student("신사임당", "201518", getMajorById(majorList, 100)),
-                new Student("이순신", "202360", getMajorById(majorList, 100)),
-                new Student("홍길동", "201290", getMajorById(majorList, 101))
+                new Student("김감찬", "211213", mKorean),
+                new Student("김유신", "212330", mComputer),
+                new Student("신사임당", "201518", mKorean),
+                new Student("이순신", "202360", mComputer),
+                new Student("홍길동", "201290", mComputer)
         );
         this.scoreList = new ArrayList<>();
         scoreList.add(new Score(getStudentById(studentList, "211213"), korean, 95));
