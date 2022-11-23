@@ -1,4 +1,4 @@
-package mission1.problem2.domain;
+package mission1.problem3.domain;
 
 public class Member {
     protected int id;
