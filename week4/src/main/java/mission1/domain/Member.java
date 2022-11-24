@@ -1,6 +1,9 @@
-package mission1.problem1.domain;
+package mission1.domain;
 
-public class Member {
+import java.util.Iterator;
+import java.util.Objects;
+
+public class Member implements Comparable<Member> {
     protected int id;
     protected String name;
     protected GRADE grade;
@@ -18,4 +21,27 @@ public class Member {
         this.name = name;
         this.grade = grade;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Member member = (Member) o;
+        return id == member.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
+
+    @Override
+    public int compareTo(Member o) {
+        return this.getId()-o.getId();
+    }
+
+//    @Override
+//    public int compareTo(Member o) {
+//        return this.getName().compareTo(o.getName());
+//    }
 }

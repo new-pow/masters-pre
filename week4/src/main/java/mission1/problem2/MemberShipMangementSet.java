@@ -1,9 +1,11 @@
 package mission1.problem2;
 
-import mission1.problem2.domain.GRADE;
-import mission1.problem2.domain.Member;
+import mission1.Report;
+import mission1.domain.GRADE;
+import mission1.domain.Member;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class MemberShipMangementSet {
@@ -16,17 +18,18 @@ public class MemberShipMangementSet {
 
     public boolean addMemberShip(int i, String name, GRADE grade) {
         boolean flag = true;
+        Member newMember = new Member(i,name,grade);
         for (Member member : memberList) {
-            if (member.getId()==i) {
+            if (member.equals(newMember)) {
                 flag = false;
+                break;
             }
         }
-
         if (flag) {
-            memberList.add(new Member(i,name,grade));
+            memberList.add(newMember);
             return true;
         }
-        System.out.println(Report.getErrorAddExistMemberMember(i));
+        System.out.println(Report.getErrorAddExistMember(i));
         return false;
     }
 

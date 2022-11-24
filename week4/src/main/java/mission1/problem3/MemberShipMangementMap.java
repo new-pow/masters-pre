@@ -1,9 +1,13 @@
 package mission1.problem3;
 
-import mission1.problem3.domain.GRADE;
-import mission1.problem3.domain.Member;
+
+
+import mission1.Report;
+import mission1.domain.GRADE;
+import mission1.domain.Member;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class MemberShipMangementMap {
@@ -22,12 +26,11 @@ public class MemberShipMangementMap {
 
     public void showAllMember() {
         System.out.println(Report.LINE);
-
-        for (Map.Entry<Integer, Member> memberMap : memberList.entrySet()) {
-            Member member = memberMap.getValue();
+        Iterator<Member> memberIterator = memberList.values().iterator();
+        while (memberIterator.hasNext()) {
+            Member member = memberIterator.next();
             System.out.println(Report.getMemberInfo(member.getName(), member.getId(), member.getGrade()));
         }
-
         System.out.println(Report.LINE);
     }
 

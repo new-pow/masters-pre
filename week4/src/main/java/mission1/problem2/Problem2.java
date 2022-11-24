@@ -1,6 +1,6 @@
 package mission1.problem2;
 
-import mission1.problem2.domain.GRADE;
+import mission1.domain.GRADE;
 
 public class Problem2 {
     public static void main(String[] args) {
