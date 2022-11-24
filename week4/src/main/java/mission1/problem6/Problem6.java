@@ -12,6 +12,6 @@ public class Problem6 {
         Plastic plastic = plasticPrinter.getMaterial(); // 형변환 하지 않음
         System.out.println(plasticPrinter);
 
-        // GenericPrinter<Water> printer = new GenericPrinter<Water>(); // 오류 코드
+//         GenericPrinter<Water> printer = new GenericPrinter<Water>(); // 오류 코드
     }
 }
