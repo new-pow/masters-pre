@@ -1,11 +1,9 @@
 package mission1.problem5;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Assertions;
+import mission1.problem5.heap.Heap;
+import mission1.problem5.heap.MaxHeap;
+import mission1.problem5.heap.MinHeap;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class HeapTest {
 

@@ -1,4 +1,4 @@
-package mission1.problem6;
+package mission1.problem6.meterial;
 
 public class Powder extends Solid implements Meterial{
 

@@ -1,4 +1,4 @@
-package mission1.problem5;
+package mission1.problem5.heap;
 
 import java.util.List;
 import java.util.Vector;
@@ -44,13 +44,13 @@ public abstract class Heap {
         heap.set(index2, temp);
     }
 
-    protected void add(int number) {
+    public void add(int number) {
         heap.add(number);
         int index = heap.size()-1;
         heapifyUp(index);
     }
 
-    protected int delete() {
+    public int delete() {
         int root = heap.get(0);
         heap.set(0, heap.get(size()-1));
         heap.remove(size()-1);

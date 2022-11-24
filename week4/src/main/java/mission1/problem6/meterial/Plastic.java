@@ -1,4 +1,4 @@
-package mission1.problem6;
+package mission1.problem6.meterial;
 
 public class Plastic extends Solid implements Meterial {
 

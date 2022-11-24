@@ -1,5 +1,8 @@
 package mission1.problem5;
 
+import mission1.problem5.heap.Heap;
+import mission1.problem5.heap.MinHeap;
+
 public class HeapSort {
 
     Heap heap;

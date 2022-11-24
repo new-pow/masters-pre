@@ -1,4 +1,4 @@
-package mission1.problem5;
+package mission1.problem5.heap;
 
 public class MaxHeap extends Heap{
     // 부모 노드가 무조건 자식 노드보다 커야한다.

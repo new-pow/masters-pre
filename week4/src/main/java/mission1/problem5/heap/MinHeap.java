@@ -1,4 +1,4 @@
-package mission1.problem5;
+package mission1.problem5.heap;
 
 public class MinHeap extends Heap{
     @Override
