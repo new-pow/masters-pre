@@ -1,4 +1,4 @@
-package mission1.problem2.problem6;
+package mission1.problem6;
 
 
 public class GenericPrinter<Meterial> {
