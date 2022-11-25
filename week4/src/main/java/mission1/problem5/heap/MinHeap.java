@@ -1,15 +1,14 @@
 package mission1.problem5.heap;
 
-public class MinHeap extends Heap{
+public class MinHeap extends Heap {
     @Override
     protected void heapifyUp(int index) {
-        int parent = getParent(index);
         int parentIndex = getParentIndex(index);
 
-        if (index==0) {
+        if (index == 0) {
             return;
         }
-        if (heap.get(index) < parent) {
+        if (heap.get(index) < heap.get(getParentIndex(index))) {
             swap(index, parentIndex);
             heapifyUp(parentIndex);
         }
@@ -39,7 +38,7 @@ public class MinHeap extends Heap{
         StringBuilder sb = new StringBuilder();
         sb.append("Min Heap : ");
         for (int number : heap) {
-            sb.append(String.format("[%d] ",number));
+            sb.append(String.format("[%d] ", number));
         }
         return sb.toString().trim();
     }

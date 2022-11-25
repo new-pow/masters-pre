@@ -1,7 +1,7 @@
-package mission1.problem6;
+package mission1.problem2.problem6;
 
-import mission1.problem6.meterial.Plastic;
-import mission1.problem6.meterial.Powder;
+import mission1.problem2.problem6.meterial.Plastic;
+import mission1.problem2.problem6.meterial.Powder;
 
 public class Problem6 {
     public static void main(String[] args) {

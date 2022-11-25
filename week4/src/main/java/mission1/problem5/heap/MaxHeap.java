@@ -1,18 +1,17 @@
 package mission1.problem5.heap;
 
-public class MaxHeap extends Heap{
+public class MaxHeap extends Heap {
     // 부모 노드가 무조건 자식 노드보다 커야한다.
 
 
     @Override
     protected void heapifyUp(int index) {
-        int parent = getParent(index);
         int parentIndex = getParentIndex(index);
 
-        if (index==0) {
+        if (index == 0) {
             return;
         }
-        if (heap.get(index) > parent) {
+        if (heap.get(index) > heap.get(index)) {
             swap(index, parentIndex);
             heapifyUp(parentIndex);
         }
@@ -25,16 +24,24 @@ public class MaxHeap extends Heap{
 
         int largestIndex = index;
 
-        if (leftIndex < size() && heap.get(leftIndex) > heap.get(index)) {
+        if (isVaildChildIndex(leftIndex, index)) {
             largestIndex = leftIndex;
         }
-        if (rightIndex < size() && heap.get(rightIndex) > heap.get(largestIndex)) {
+        if (isVaildChildIndex(rightIndex, largestIndex)) {
             largestIndex = rightIndex;
         }
-        if (largestIndex != index) {
+        if (isNeedSwap(index, largestIndex)) {
             swap(index, largestIndex);
             heapifyDown(largestIndex);
         }
+    }
+
+    private boolean isVaildChildIndex(int firstIndex, int largestIndex) {
+        return firstIndex < size() && heap.get(firstIndex) > heap.get(largestIndex);
+    }
+
+    private boolean isNeedSwap(int index, int largestIndex) {
+        return largestIndex != index;
     }
 
     @Override
@@ -42,7 +49,7 @@ public class MaxHeap extends Heap{
         StringBuilder sb = new StringBuilder();
         sb.append("Max Heap : ");
         for (int number : heap) {
-            sb.append(String.format("[%d] ",number));
+            sb.append(String.format("[%d] ", number));
         }
         return sb.toString().trim();
     }
