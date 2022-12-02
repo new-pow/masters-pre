@@ -21,16 +21,20 @@ public class MinHeap extends Heap {
 
         int smallerstIndex = index;
 
-        if (leftIndex < size() && heap.get(leftIndex) < heap.get(index)) {
+        if (isVaildIndex(leftIndex, index)) {
             smallerstIndex = leftIndex;
         }
-        if (rightIndex < size() && heap.get(rightIndex) < heap.get(smallerstIndex)) {
+        if (isVaildIndex(rightIndex, smallerstIndex)) {
             smallerstIndex = rightIndex;
         }
         if (smallerstIndex != index) {
             swap(index, smallerstIndex);
             heapifyDown(smallerstIndex);
         }
+    }
+
+    private boolean isVaildIndex(int rightIndex, int smallerstIndex) {
+        return rightIndex < size() && heap.get(rightIndex) < heap.get(smallerstIndex);
     }
 
     @Override

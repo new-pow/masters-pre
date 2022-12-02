@@ -32,7 +32,7 @@ public class Member implements Comparable<Member> {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId());
+        return id;
     }
 
     @Override
